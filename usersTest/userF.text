@@ -1,0 +1,37 @@
+//------- user1----///
+{
+    "id": 1051198483,
+    "nickname": "TETE7177665",
+    "password": "qatest2059",
+    "site_status": "active",
+    "email": "test_user_50357305@testuser.com"
+	"Creada : 04/01/22"
+	"credential produccion":{
+		"public_key":APP_USR-77d39084-64e6-4c06-a522-3f4ef3f21ffe"
+		"access_token":"APP_USR-3445499910542999-010423-3fee432d4af76693e8ae02f0eba25aa7-1051198483"
+	}
+	"credential prueba":{
+		"public_key":TEST-b6bfd9eb-c281-4866-9b3e-9c935841e838"
+		"access_token":"TEST-3445499910542999-010423-7d9e01f7e995b00c22e5690a0255b23f-1051198483"
+	}
+}
+
+
+///-------- user2-----//
+
+{
+    "id": 1051202924,
+    "nickname": "TESTDXAUAIB8",
+    "password": "qatest8983",
+    "site_status": "active",
+    "email": "test_user_8237276@testuser.com"
+	"Creada : 04/01/22"
+	"credential produccion":{
+		"public_key":"APP_USR-5e5ba70f-c735-4bfe-87b9-1799ef316c44"
+		"access_token":"APP_USR-1221541659841498-010423-928b048b0fff073eb5160b669d4fed2b-1051202924"
+	}
+	"credential prueba":{
+		"public_key":"TEST-15e74d46-5734-478a-ac0d-06dab990ce8e"
+		"access_token":"TEST-1221541659841498-010423-97c8350ae2bb98f9e71851d6a6a497fe-1051202924"
+	}
+}
