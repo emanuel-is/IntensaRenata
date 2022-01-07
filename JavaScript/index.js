@@ -1,9 +1,15 @@
+
+
 const express = require('express');
 const app = express();
-
+const bodyParser= require('body-parser');
 
 // SDK de Mercado Pago
 const mercadopago = require ('mercadopago');
+
+//middleware
+app.use(bodyParser.urlencoded({extended:false}))
+
 
 // Agrega credenciales
 mercadopago.configure({
@@ -12,13 +18,13 @@ mercadopago.configure({
 
 //routes
 
-app.get('/checkout', (req, res)=>{
+app.post('/checkout', (req, res)=>{
               
 // Crea un objeto de preferencia
 let preference = {
     items: [
       {
-        title: 'Mi producto',
+        title: 'Mi producto1',
         unit_price: 100,
         quantity: 1,
       }
@@ -27,8 +33,10 @@ let preference = {
   
   mercadopago.preferences.create(preference)
   .then(function(response){
- 
     
+   
+    res.redirect(response.body.init_point)
+
   }).catch(function(error){
     console.log(error);
   });

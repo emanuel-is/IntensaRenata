@@ -155,3 +155,8 @@ window.onload = function(){
         renderCarrito()
     }
 }
+
+
+
+//------ integracion api de mercado Pago---------------
+
