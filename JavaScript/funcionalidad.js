@@ -9,6 +9,7 @@ let carrito = [];
 
 
 
+
 clickAgregar.forEach(btn =>{
     btn.addEventListener('click', addCarritoItem)   // recorro la constante clickAgregar y le digo que para cada btn le agregue el evento click con una funcion.
     
@@ -56,7 +57,7 @@ function addItemCarrito(nuevoItem){   //creo una nueva funcion llamada anteriorm
     }
     carrito.push(nuevoItem);          //  agrego a carrito ese nuevo item creado.
     renderCarrito();                     // llamo a la funcion 
-    $(".offCarrito").append('<h3>Puede seguir agregando productos al carrito o aumentarle la cantidad</h3>')   //----- agrego titulo descriptivo on jquery-------
+    /* $(".offCarrito").append('<h3>Puede seguir agregando productos al carrito o aumentarle la cantidad</h3>') */   //----- agrego titulo descriptivo on jquery-------
 
 }
 
@@ -84,11 +85,12 @@ function renderCarrito(){           // creo esa funcion llamada anteriormente.
         tr.querySelector(".cantidadElemento").addEventListener('change', sumaCantidad);
     })
     totalCarrito();
-    
-    
-
+   
     
 }
+console.log(carrito)
+let total1=0;
+
 
 function totalCarrito(){
 
@@ -101,12 +103,12 @@ function totalCarrito(){
     })
     itemCarritoTotal.innerHTML= `Total = $ ${total}`;
     $('.itemCarTotal').css('color', '#2c7da7');       //----------------------- Cambio color de la cuenta con jquery----------
-    
+    total1=total;
     addLocalStorage()
-
+    return total
 }
 
-
+console.log(total1);
 
 function removeItemCarrito(e){
 
@@ -125,7 +127,7 @@ function removeItemCarrito(e){
 
     tr.remove();
     totalCarrito();
-    $("h3").empty();  // ----------- borro el h3 con empty de jquery-----------   
+    /* $("h3").empty(); */  // ----------- borro el h3 con empty de jquery-----------   
 }
   
 function sumaCantidad(e){
@@ -158,5 +160,42 @@ window.onload = function(){
 
 
 
-//------ integracion api de mercado Pago---------------
+//------ Animacion de los productos del carrito---------------
 
+
+$('.btnToogleAni').click(function(){
+
+    $('.containerAnillo').fadeIn('slow',function(){
+        $('.containerCyD').fadeOut('fast');
+        $('.containerAros').fadeOut('fast');
+        $('.containerCharms').fadeOut('fast');
+    })
+
+});
+
+$('.btnToogleCyD').click(function(){
+
+    $('.containerCyD').fadeIn('slow',function(){
+        $('.containerAnillo').fadeOut('fast');
+        $('.containerAros').fadeOut('fast');
+        $('.containerCharms').fadeOut('fast');
+    })
+})
+
+$('.btnToogleAros').click(function(){
+
+    $('.containerAros').fadeIn('slow',function(){
+        $('.containerAnillo').fadeOut('fast');
+        $('.containerCyD').fadeOut('fast');
+        $('.containerCharms').fadeOut('fast');
+    })
+})
+
+$('.btnToogleCharms').click(function(){
+
+    $('.containerCharms').fadeIn('slow',function(){
+        $('.containerAnillo').fadeOut('fast');
+        $('.containerCyD').fadeOut('fast');
+        $('.containerAros').fadeOut('fast');
+    })
+})

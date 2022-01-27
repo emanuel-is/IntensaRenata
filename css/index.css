@@ -1,7 +1,7 @@
 
 
 body{
-    background-color: rgb(189, 189, 189);
+    background-color: rgba(204, 119, 119, 0.226);
     margin: 5px;
     padding-top: 2px;
 }
@@ -21,11 +21,14 @@ header{
     padding: 10%;
     width: 90%;
     margin-top: 5%;
-    background-color: rgb(228, 248, 228);
+    background-color: rgb(212, 159, 236);
     display: flex;
+    margin-bottom: 25px;
 }
 .tituloAccesorio img {
     border-radius: 3px;
+    padding: 39px;
+    border-radius: 100%;
 }
 .carrito{
     min-width: 70vh;
@@ -63,3 +66,14 @@ header{
     padding-left: 3rem;
     padding-right: 3rem;
 } 
+
+
+.containerCyD{
+    display: none;
+}
+.containerAros{
+    display: none;
+}
+.containerCharms{
+    display:none;
+}

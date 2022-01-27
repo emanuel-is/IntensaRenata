@@ -21,15 +21,15 @@ mercadopago.configure({
 app.post('/checkout', (req, res)=>{
               
 // Crea un objeto de preferencia
-let preference = {
-    items: [
-      {
-        title: 'Mi producto1',
-        unit_price: 100,
-        quantity: 1,
-      }
-    ]
-  };
+  let preference = {
+      items: [
+        {
+          title:req.body.tProducto,
+          unit_price:parseFloat(req.body.price),
+          quantity: 1,
+        }
+      ]
+    };
   
   mercadopago.preferences.create(preference)
   .then(function(response){
