@@ -36,23 +36,19 @@
                         Productos
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                        <li><a class="dropdown-item" href="#home">Anillos</a></li>
-                        <li><a class="dropdown-item" href="#profile">Collares y dijes</li>
+                        <li><a class="dropdown-item btnToogleAni"  href="#anillos">Anillos</a></li>
+                        <li><a class="dropdown-item btnToogleCyD" href="#collares">Collares y dijes</li>
                         <li>
                           <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#aros-tab">Aros</a></li>
-                        <li><a class="dropdown-item" href="#charms-tab">Charms</a></li>
+                        <li><a class="dropdown-item btnToogleAros" href="#aros">Aros</a></li>
+                        <li><a class="dropdown-item btnToogleCharms" href="#charms">Charms</a></li>
                       </ul>
                     </li>
                     <li class="nav-item">
                       <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Carrito</button>
-                  </li>
+                    </li>
                   </ul>
-                  <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                  </form>
                 </div>
               </div>
             </div>
@@ -115,20 +111,18 @@
               </table>
               <br><br>
               <!-- total del carrito y boton de comprar -->
-              <div class="row mx-4">
-                <form action="http://localhost:3000/checkout" method="Post"></form>
+                <div class="row mx-4">
+              <form action="http://localhost:3000/checkout" method="POST">
                   <div class="col">
-                    <h3 class="itemCarTotal">Total : 5000</h3>
+                    <h3 class="itemCarTotal"></h3>
                   </div>
                 
-                    <input type="hidden" name="tProducto" value='hola'>
-                    <input type="hidden" name="price" value="itemCarTotal.value">
+                    <input type="hidden" name="titlee" value='productos'>
+                    <input type="hidden" name="price"type="number" value= "50000">
                     <input type="submit" value="COMPRAR" class="btn btn-success">
 
-                </form>
-                <!-- <div class="col d-flex justify-content-end">
-                  <button class="btn btn-success">COMPRAR</button>
-                </div> -->
+              </form>
+                
 
               </div>
             </div>
@@ -161,29 +155,29 @@
           <div class="col d-flex justify-content-center mb-4" >
             <div class="col">
               <div class="card shadow mb-1 bg-light rounded " style="width: 18rem;" >
-                <h5 class="card-title mb-1 pt-2 text-center text-darck">Anillo Solitario Corona</h5>
+                <h5 class="card-title mb-1 pt-2 text-center text-dark">Anillo Solitario Corona</h5>
                 <img src="./imagenes/Anillo Solitario Corona.png" class="card-img-top" id ="anillos">
                 <div class="card-body  ">
                   <p class="card-text text-success-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <h5 class=" text-primary">Precio : <span class="precio">$ 10000.00</span> </h5>
                   <div class="d-grid gap-2">
-                    <button class="btn btn-light btn-lg button"  id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal">Agregar al Carrito</button>
+                    <button class="btn btn-dark btn-lg button"  id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal">Agregar al Carrito</button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <!-- 2 of 5 -->
-          <div class="col d-flex justify-content-center mb-4">
+          <div id= "anillos" class="col d-flex justify-content-center mb-4">
             <div class="col">
-              <div class="card shadow mb-1 bg-dark rounded " style="width: 18rem;">
-                <h5 class="card-title mb-1 pt-2 text-center text-primary">Hojas Brillantes</h5>
+              <div class="card shadow mb-1 bg-light rounded " style="width: 18rem;">
+                <h5 class="card-title mb-1 pt-2 text-center text-dark">Hojas Brillantes</h5>
                 <img src="./imagenes/Hojas Brillantes.png" class="card-img-top" alt="...">
                 <div class="card-body  ">
-                  <p class="card-text text-white-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text text-dark-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <h5 class=" text-primary">Precio : <span class="precio"> $ 5500</span> </h5>
                   <div class="d-grid gap-2">
-                    <button class="btn btn-light btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
+                    <button class="btn btn-dark btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
                   </div>
                 </div>
               </div>
@@ -192,14 +186,14 @@
           <!-- 3 of 5 -->
           <div class="col d-flex justify-content-center mb-4">
             <div class="col">
-              <div class="card shadow mb-1 bg-dark rounded " style="width: 18rem;">
-                <h5 class="card-title mb-1 pt-2 text-center text-primary">Banda Triple Cruzado Con Pavé</h5>
+              <div class="card shadow mb-1 bg-light rounded " style="width: 18rem;">
+                <h5 class="card-title mb-1 pt-2 text-center text-dark">Banda Triple Cruzado Con Pavé</h5>
                 <img src="./imagenes/Banda Triple Cruzado Con Pavé.png" class="card-img-top" alt="...">
                 <div class="card-body  ">
-                  <p class="card-text text-white-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text text-dark-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <h5 class=" text-primary">Precio : <span class="precio">$ 9800</span> </h5>
                   <div class="d-grid gap-2">
-                    <button class="btn btn-light btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal">Agregar al Carrito</button>
+                    <button class="btn btn-dark btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal">Agregar al Carrito</button>
                   </div>
                 </div>
               </div>
@@ -208,14 +202,14 @@
           <!-- 4 of 5-->
           <div class="col d-flex justify-content-center mb-4">
             <div class="col">
-              <div class="card shadow mb-1 bg-dark rounded " style="width: 18rem;">
-                <h5 class="card-title mb-1 pt-2 text-center text-primary">Banda Pétalos De Rosa</h5>
+              <div class="card shadow mb-1 bg-ligth rounded " style="width: 18rem;">
+                <h5 class="card-title mb-1 pt-2 text-center text-dark">Banda Pétalos De Rosa</h5>
                 <img src="./imagenes/Banda Pétalos De Rosa.png" class="card-img-top" alt="...">
                 <div class="card-body  ">
-                  <p class="card-text text-white-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text text-dark-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <h5 class=" text-primary">Precio : <span class="precio">$ 5400</span> </h5>
                   <div class="d-grid gap-2">
-                    <button class="btn btn-light btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
+                    <button class="btn btn-dark btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
                   </div>
                 </div>
               </div>
@@ -224,14 +218,14 @@
           <!-- 5 of 5 -->
           <div class="col d-flex justify-content-center mb-4">
             <div class="col">
-              <div class="card shadow mb-1 bg-dark rounded " style="width: 18rem;">
-                <h5 class="card-title mb-1 pt-2 text-center text-primary">Corona pulida</h5>
+              <div class="card shadow mb-1 bg-ligth rounded " style="width: 18rem;">
+                <h5 class="card-title mb-1 pt-2 text-center text-dark">Corona pulida</h5>
                 <img src="./imagenes/Corona pulida.png" class="card-img-top" alt="...">
                 <div class="card-body  ">
-                  <p class="card-text text-white-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <p class="card-text text-dark-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <h5 class=" text-primary">Precio : <span class="precio">$ 6200</span> </h5>
                   <div class="d-grid gap-2">
-                    <button class="btn btn-light btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
+                    <button class="btn btn-dark btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
                   </div>
                 </div>
               </div>
@@ -250,30 +244,30 @@
             <!-- 1 of 5 -->
             <div class="col d-flex justify-content-center mb-4">
               <div class="col">
-                <div class="card shadow mb-1 bg-dark rounded " style="width: 18rem;">
-                  <h5 class="card-title mb-1 pt-2 text-center text-primary">Estrella Azul De Cenicienta De Disney</h5>
+                <div class="card shadow mb-1 bg-ligth rounded " style="width: 18rem;">
+                  <h5 class="card-title mb-1 pt-2 text-center text-dark">Estrella Azul De Cenicienta De Disney</h5>
                   <img src="./imagenes/Estrella Azul De Cenicienta De Disney.png" class="card-img-top" alt="...">
                   <div class="card-body  ">
-                    <p class="card-text text-white-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text text-dark-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <h5 class=" text-primary">Precio : <span class="precio">$ 8000</span> </h5>
                     <div class="d-grid gap-2">
-                      <button class="btn btn-light btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
+                      <button class="btn btn-dark btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <!-- 2 of 5 -->
-            <div class="col d-flex justify-content-center mb-4">
+            <div id="collares" class="col d-flex justify-content-center mb-4">
               <div class="col">
-                <div class="card shadow mb-1 bg-dark rounded " style="width: 18rem;">
-                  <h5 class="card-title mb-1 pt-2 text-center text-primary">Dije Llave Del Corazón</h5>
+                <div class="card shadow mb-1 bg-ligth rounded " style="width: 18rem;">
+                  <h5 class="card-title mb-1 pt-2 text-center text-dark">Dije Llave Del Corazón</h5>
                   <img src="./imagenes/Dije Llave Del Corazón.png" class="card-img-top" alt="...">
                   <div class="card-body  ">
-                    <p class="card-text text-white-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text text-dark-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <h5 class=" text-primary">Precio : <span class="precio"> $ 9100</span> </h5>
                     <div class="d-grid gap-2">
-                      <button class="btn btn-light btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal">Agregar al Carrito</button>
+                      <button class="btn btn-dark btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal">Agregar al Carrito</button>
                     </div>
                   </div>
                 </div>
@@ -282,14 +276,14 @@
             <!-- 3 of 5 -->
             <div class="col d-flex justify-content-center mb-4">
               <div class="col">
-                <div class="card shadow mb-1 bg-dark rounded " style="width: 18rem;">
-                  <h5 class="card-title mb-1 pt-2 text-center text-primary">Collar Cadena de cuentas</h5>
+                <div class="card shadow mb-1 bg-ligth rounded " style="width: 18rem;">
+                  <h5 class="card-title mb-1 pt-2 text-center text-dark">Collar Cadena de cuentas</h5>
                   <img src="./imagenes/Collar Cadena de cuentas.png" class="card-img-top" alt="...">
                   <div class="card-body  ">
-                    <p class="card-text text-white-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text text-dark-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <h5 class=" text-primary">Precio : <span class="precio">$ 18000</span> </h5>
                     <div class="d-grid gap-2">
-                      <button class="btn btn-light btn-lg button" id = "agregar"  data-bs-toggle="modal" data-bs-target="#mymodal">Agregar al Carrito</button>
+                      <button class="btn btn-dark btn-lg button" id = "agregar"  data-bs-toggle="modal" data-bs-target="#mymodal">Agregar al Carrito</button>
                     </div>
                   </div>
                 </div>
@@ -298,14 +292,14 @@
             <!-- 4 of 5-->
             <div class="col d-flex justify-content-center mb-4">
               <div class="col">
-                <div class="card shadow mb-1 bg-dark rounded " style="width: 18rem;">
-                  <h5 class="card-title mb-1 pt-2 text-center text-primary">Collar De Cuero Negro Con Pluma</h5>
+                <div class="card shadow mb-1 bg-ligth rounded " style="width: 18rem;">
+                  <h5 class="card-title mb-1 pt-2 text-center text-dark">Collar De Cuero Negro Con Pluma</h5>
                   <img src="./imagenes/Collar De Cuero Negro Con Pluma.png" class="card-img-top" alt="...">
                   <div class="card-body  ">
-                    <p class="card-text text-white-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text text-dark-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <h5 class=" text-primary">Precio : <span class="precio">$ 8400</span> </h5>
                     <div class="d-grid gap-2">
-                      <button class="btn btn-light btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
+                      <button class="btn btn-dark btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
                     </div>
                   </div>
                 </div>
@@ -322,16 +316,16 @@
             <div class="containerAros">
               <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
                 <!-- 1 of 5 -->
-                <div class="col d-flex justify-content-center mb-4">
+                <div id="aros" class="col d-flex justify-content-center mb-4">
                   <div class="col">
-                    <div class="card shadow mb-1 bg-dark rounded " style="width: 18rem;">
-                      <h5 class="card-title mb-1 pt-2 text-center text-primary">Aros De Botón Medianoche Centelleante</h5>
+                    <div class="card shadow mb-1 bg-light rounded " style="width: 18rem;">
+                      <h5 class="card-title mb-1 pt-2 text-center text-dark">Aros De Botón Medianoche Centelleante</h5>
                       <img src="./imagenes/Aros De Botón Medianoche Centelleante.png" class="card-img-top" alt="...">
                       <div class="card-body  ">
-                        <p class="card-text text-white-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text text-dark-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <h5 class=" text-primary">Precio : <span class="precio">$ 10250</span> </h5>
                         <div class="d-grid gap-2">
-                          <button class="btn btn-light btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal">Agregar al Carrito</button>
+                          <button class="btn btn-dark btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal">Agregar al Carrito</button>
                         </div>
                       </div>
                     </div>
@@ -340,30 +334,30 @@
                 <!-- 2 of 5 -->
                 <div class="col d-flex justify-content-center mb-4">
                   <div class="col">
-                    <div class="card shadow mb-1 bg-dark rounded " style="width: 18rem;">
-                      <h5 class="card-title mb-1 pt-2 text-center text-primary">Aros colgantes ovales Corazones anudados</h5>
+                    <div class="card shadow mb-1 bg-ligth rounded " style="width: 18rem;">
+                      <h5 class="card-title mb-1 pt-2 text-center text-dark">Aros colgantes ovales Corazones anudados</h5>
                       <img src="./imagenes/Corazones anudados.png" class="card-img-top" alt="...">
                       <div class="card-body  ">
-                        <p class="card-text text-white-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text text-dark-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <h5 class=" text-primary">Precio : <span class="precio"> $ 18600</span> </h5>
                         <div class="d-grid gap-2">
-                          <button class="btn btn-light btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal">Agregar al Carrito</button>
+                          <button class="btn btn-dark btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal">Agregar al Carrito</button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <!-- 3 of 5 -->
-                <div class="col d-flex justify-content-center mb-4">
+                <div  class="col d-flex justify-content-center mb-4">
                   <div class="col">
-                    <div class="card shadow mb-1 bg-dark rounded " style="width: 18rem;">
-                      <h5 class="card-title mb-1 pt-2 text-center text-primary">Aro Colgantes Pluma Reluciente</h5>
+                    <div class="card shadow mb-1 bg-ligth rounded " style="width: 18rem;">
+                      <h5 class="card-title mb-1 pt-2 text-center text-dark">Aro Colgantes Pluma Reluciente</h5>
                       <img src="./imagenes/Aro Colgantes Pluma Reluciente.png" class="card-img-top" alt="...">
                       <div class="card-body  ">
-                        <p class="card-text text-white-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text text-dark-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <h5 class=" text-primary">Precio : <span class="precio">$ 27900</span> </h5>
                         <div class="d-grid gap-2">
-                          <button class="btn btn-light btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
+                          <button class="btn btn-dark btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
                         </div>
                       </div>
                     </div>
@@ -372,14 +366,14 @@
                 <!-- 4 of 5-->
                 <div class="col d-flex justify-content-center mb-4">
                   <div class="col">
-                    <div class="card shadow mb-1 bg-dark rounded " style="width: 18rem;">
-                      <h5 class="card-title mb-1 pt-2 text-center text-primary">Aro De Botón Ala De Mariposa Calada</h5>
+                    <div class="card shadow mb-1 bg-light rounded " style="width: 18rem;">
+                      <h5 class="card-title mb-1 pt-2 text-center text-dark">Aro De Botón Ala De Mariposa Calada</h5>
                       <img src="./imagenes/Ala de Mariposa.png" class="card-img-top" alt="...">
                       <div class="card-body  ">
-                        <p class="card-text text-white-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text text-dark-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <h5 class=" text-primary">Precio : <span class="precio">$ 18600</span> </h5>
                         <div class="d-grid gap-2">
-                          <button class="btn btn-light btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal">Agregar al Carrito</button>
+                          <button class="btn btn-dark btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal">Agregar al Carrito</button>
                         </div>
                       </div>
                     </div>
@@ -388,14 +382,14 @@
                 <!-- 5 of 5 -->
                 <div class="col d-flex justify-content-center mb-4">
                   <div class="col">
-                    <div class="card shadow mb-1 bg-dark rounded " style="width: 18rem;">
-                      <h5 class="card-title mb-1 pt-2 text-center text-primary">Aros De Botón Flores En Dos Tonos</h5>
+                    <div class="card shadow mb-1 bg-light rounded " style="width: 18rem;">
+                      <h5 class="card-title mb-1 pt-2 text-center text-dark">Aros De Botón Flores En Dos Tonos</h5>
                       <img src="./imagenes/Aros De Botón Flores En Dos Tonos.png" class="card-img-top" alt="...">
                       <div class="card-body  ">
-                        <p class="card-text text-white-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text text-dark-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <h5 class=" text-primary">Precio : <span class="precio">$ 25700</span> </h5>
                         <div class="d-grid gap-2">
-                          <button class="btn btn-light btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
+                          <button class="btn btn-dark btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
                         </div>
                       </div>
                     </div>
@@ -413,14 +407,14 @@
                 <!-- 1 of 6 -->
                 <div class="col d-flex justify-content-center mb-4">
                   <div class="col">
-                    <div class="card shadow mb-1 bg-dark rounded " style="width: 18rem;">
-                      <h5 class="card-title mb-1 pt-2 text-center text-primary">Charm Clip Globo Azul</h5>
+                    <div class="card shadow mb-1 bg-light rounded " style="width: 18rem;">
+                      <h5 class="card-title mb-1 pt-2 text-center text-dark">Charm Clip Globo Azul</h5>
                       <img src="./imagenes/Charm Clip Globo Azul.png" class="card-img-top" alt="...">
                       <div class="card-body  ">
-                        <p class="card-text text-white-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text text-dark-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <h5 class=" text-primary">Precio : <span class="precio">$ 8400</span> </h5>
                         <div class="d-grid gap-2">
-                          <button class="btn btn-light btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal">Agregar al Carrito</button>
+                          <button class="btn btn-dark btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal">Agregar al Carrito</button>
                         </div>
                       </div>
                     </div>
@@ -429,30 +423,30 @@
                 <!-- 2 of 6 -->
                 <div class="col d-flex justify-content-center mb-4">
                   <div class="col">
-                    <div class="card shadow mb-1 bg-dark rounded " style="width: 18rem;">
-                      <h5 class="card-title mb-1 pt-2 text-center text-primary">Charm Clip Estrella De La Muerte De Star WarsHojas Brillantes</h5>
+                    <div class="card shadow mb-1 bg-light rounded " style="width: 18rem;">
+                      <h5 class="card-title mb-1 pt-2 text-center text-dark">Charm Clip Estrella De La Muerte De Star WarsHojas Brillantes</h5>
                       <img src="./imagenes/Charma clip esrella de la muerte.png" class="card-img-top" alt="...">
                       <div class="card-body  ">
-                        <p class="card-text text-white-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text text-dark-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <h5 class=" text-primary">Precio : <span class="precio"> $ 10250</span> </h5>
                         <div class="d-grid gap-2">
-                          <button class="btn btn-light btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
+                          <button class="btn btn-dark btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <!-- 3 of 6 -->
-                <div class="col d-flex justify-content-center mb-4">
+                <div id="charms" class="col d-flex justify-content-center mb-4">
                   <div class="col">
-                    <div class="card shadow mb-1 bg-dark rounded " style="width: 18rem;">
-                      <h5 class="card-title mb-1 pt-2 text-center text-primary">Charm Colgante Yoda De Star Wars</h5>
+                    <div class="card shadow mb-1 bg-light rounded " style="width: 18rem;">
+                      <h5 class="card-title mb-1 pt-2 text-center text-dark">Charm Colgante Yoda De Star Wars</h5>
                       <img src="./imagenes/Charm Colgante Yoda De Star Wars.png" class="card-img-top" alt="...">
                       <div class="card-body  ">
-                        <p class="card-text text-white-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text text-dark-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <h5 class=" text-primary">Precio : <span class="precio">$ 13950</span> </h5>
                         <div class="d-grid gap-2">
-                          <button class="btn btn-light btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
+                          <button class="btn btn-dark btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
                         </div>
                       </div>
                     </div>
@@ -461,14 +455,14 @@
                 <!-- 4 of 6-->
                 <div class="col d-flex justify-content-center mb-4">
                   <div class="col">
-                    <div class="card shadow mb-1 bg-dark rounded " style="width: 18rem;">
-                      <h5 class="card-title mb-1 pt-2 text-center text-primary">Charm Ariel De La Sirenita De Disney</h5>
+                    <div class="card shadow mb-1 bg-light rounded " style="width: 18rem;">
+                      <h5 class="card-title mb-1 pt-2 text-center text-dark">Charm Ariel De La Sirenita De Disney</h5>
                       <img src="./imagenes/Charm Ariel De La Sirenita De Disney.png" class="card-img-top" alt="...">
                       <div class="card-body  ">
-                        <p class="card-text text-white-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text text-dark-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <h5 class=" text-primary">Precio : <span class="precio">$ 10250</span> </h5>
                         <div class="d-grid gap-2">
-                          <button class="btn btn-light btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
+                          <button class="btn btn-dark btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
                         </div>
                       </div>
                     </div>
@@ -477,14 +471,14 @@
                 <!-- 5 of 6 -->
                 <div class="col d-flex justify-content-center mb-4">
                   <div class="col">
-                    <div class="card shadow mb-1 bg-dark rounded " style="width: 18rem;">
-                      <h5 class="card-title mb-1 pt-2 text-center text-primary">Charm Colgante Halcón Milenario De Star Wars Recubrimiento en Oro de 14k</h5>
+                    <div class="card shadow mb-1 bg-light rounded " style="width: 18rem;">
+                      <h5 class="card-title mb-1 pt-2 text-center text-dark">Charm Colgante Halcón Milenario De Star Wars Recubrimiento en Oro de 14k</h5>
                       <img src="./imagenes/Charm Colgante Halcón Milenario.png" class="card-img-top" alt="...">
                       <div class="card-body  ">
-                        <p class="card-text text-white-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text text-dark-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <h5 class=" text-primary">Precio : <span class="precio">$ 12100</span> </h5>
                         <div class="d-grid gap-2">
-                          <button class="btn btn-light btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
+                          <button class="btn btn-dark btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
                         </div>
                       </div>
                     </div>
@@ -493,14 +487,14 @@
                  <!-- 6 of 6 -->
                  <div class="col d-flex justify-content-center mb-4">
                   <div class="col">
-                    <div class="card shadow mb-1 bg-dark rounded " style="width: 18rem;">
-                      <h5 class="card-title mb-1 pt-2 text-center text-primary">Charm GROGU™ & Crib Star Wars</h5>
+                    <div class="card shadow mb-1 bg-light rounded " style="width: 18rem;">
+                      <h5 class="card-title mb-1 pt-2 text-center text-dark">Charm GROGU™ & Crib Star Wars</h5>
                       <img src="./imagenes/Charm GROGU.png" class="card-img-top" alt="...">
                       <div class="card-body  ">
-                        <p class="card-text text-white-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text text-dark-50 description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <h5 class=" text-primary">Precio : <span class="precio">$ 8400</span> </h5>
                         <div class="d-grid gap-2">
-                          <button class="btn btn-light btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
+                          <button class="btn btn-dark btn-lg button" id = "agregar" data-bs-toggle="modal" data-bs-target="#mymodal" >Agregar al Carrito</button>
                         </div>
                       </div>
                     </div>
@@ -524,35 +518,14 @@
           </div>
         </section>
     </main>
-   
-    
-
-
-
-      <!-- ejemplo hecho a mano -->
-    <div>
-        <img src="" alt="x">
-        <p>pulsera de acero blanco, con eslabones</p> 
-        <span>$1600</span>
-        <button onclick=" AgregarCarrito1 (precioPulAcBlanco)">Agregar al Carrito</button>
-    </div> <hr>
-    
-        
-        <p>Con Visa y master son : <br>
-             hasta 3 (tres) cuotas sin interes. <br>
-             6(seis) cuotas con un recargo del 15%.   <br>
-             12(doce) cuotas con un recargo del 35%.
-        </p>
-        <button onclick="cantidadDecuotas (  )">Calcular cuotas</button>
-    </div>
-
+  
 
     <footer class="bg-dark p-3 mt-5">
       <p class="text-center m-0 text-muted">Proyecto JavaScript BI Ema.Is</p>
     </footer>
+    <script src="./JavaScript/funcionalidad.js"></script>
     <script src="./JavaScript/index.js"></script>
     <script src="./JavaScript/obj-arrays.js"></script>
-    <script src="./JavaScript/funcionalidad.js"></script>
     <script src="./JavaScript/proyecto.js"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

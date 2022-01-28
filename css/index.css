@@ -21,9 +21,10 @@ header{
     padding: 10%;
     width: 90%;
     margin-top: 5%;
-    background-color: rgb(212, 159, 236);
+    background-color: #9963b21f;
     display: flex;
     margin-bottom: 25px;
+    border-radius: 5px;
 }
 .tituloAccesorio img {
     border-radius: 3px;

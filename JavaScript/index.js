@@ -19,23 +19,30 @@ mercadopago.configure({
 //routes
 
 app.post('/checkout', (req, res)=>{
-              
 // Crea un objeto de preferencia
   let preference = {
       items: [
         {
-          title:req.body.tProducto,
-          unit_price:parseFloat(req.body.price),
+          title:"Productos",
+          unit_price: 50000,
           quantity: 1,
         }
-      ]
+      ],
+      back_urls:{
+        success:"http://localhost:3000/feedback",
+        failure:"http://localhost:3000/feedback",
+        pending:"http://localhost:3000/feedback"
+      },
+      auto_return:"approved",
+
     };
   
   mercadopago.preferences.create(preference)
   .then(function(response){
     
-   
-    res.redirect(response.body.init_point)
+  /*  console.log(response.body);
+    res.send('checkout'); */
+   res.redirect(response.body.init_point)
 
   }).catch(function(error){
     console.log(error);
